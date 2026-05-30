@@ -12,8 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" }, 
   },
-  // Force-enable the Nitro deployment plugin specifically for Netlify hosting
-  nitro: {
-    preset: "netlify"
+  // Pass configuration down to the underlying Vite and Nitro engine safely
+  vite: {
+    nitro: {
+      preset: "netlify"
+    }
   }
 });
