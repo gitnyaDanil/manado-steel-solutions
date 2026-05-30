@@ -87,6 +87,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Bengkel Lengkoan" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
+      { name: "twitter:title", content: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
+      { name: "description", content: "Manado Steel Solutions offers specialized steel repair services and asphalt sprayers." },
+      { property: "og:description", content: "Manado Steel Solutions offers specialized steel repair services and asphalt sprayers." },
+      { name: "twitter:description", content: "Manado Steel Solutions offers specialized steel repair services and asphalt sprayers." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7eb1a020-79a3-4637-bdf2-683624f1ef95/id-preview-308e1008--dbaa775f-7542-44ed-a635-381344df328d.lovable.app-1780165623520.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7eb1a020-79a3-4637-bdf2-683624f1ef95/id-preview-308e1008--dbaa775f-7542-44ed-a635-381344df328d.lovable.app-1780165623520.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
