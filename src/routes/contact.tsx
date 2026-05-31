@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import front from "@/assets/photos/workshop-front.jpg";
+import { contactPhoneDisplay, contactPhoneTel, whatsappUrl } from "@/lib/contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -48,11 +49,28 @@ function ContactPage() {
             <h1 className="font-display text-6xl text-primary md:text-7xl">Hubungi Kami</h1>
             <p className="mt-6 max-w-md text-muted-foreground">
               Untuk pertanyaan mengenai jasa perbaikan baja kami, hubungi kami di{" "}
-              <a href="tel:+6281143498910" className="font-medium text-accent hover:underline">
-                0811-4349-891
+              <a href={`tel:${contactPhoneTel}`} className="font-medium text-accent hover:underline">
+                {contactPhoneDisplay}
               </a>{" "}
               atau kunjungi bengkel kami di Manado.
             </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-[#25D366] px-6 py-3 font-display text-sm uppercase tracking-widest text-white transition-colors hover:bg-[#1ebe5d]"
+              >
+                Chat WhatsApp
+              </a>
+              <a
+                href={`tel:${contactPhoneTel}`}
+                className="rounded-full border border-input px-6 py-3 font-display text-sm uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+              >
+                Telepon
+              </a>
+            </div>
 
             <dl className="mt-10 space-y-6 text-sm">
               <div>
@@ -64,7 +82,7 @@ function ContactPage() {
               </div>
               <div>
                 <dt className="font-display text-lg uppercase tracking-widest text-accent">Telepon / WhatsApp</dt>
-                <dd className="mt-1 text-foreground/80">0811-4349-891</dd>
+                <dd className="mt-1 text-foreground/80">{contactPhoneDisplay}</dd>
               </div>
               <div>
                 <dt className="font-display text-lg uppercase tracking-widest text-accent">Jam Operasional</dt>

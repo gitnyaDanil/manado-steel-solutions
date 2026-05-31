@@ -1,3 +1,5 @@
+import { contactPhoneDisplay, contactPhoneTel, whatsappUrl } from "@/lib/contact";
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
@@ -18,7 +20,13 @@ export function Footer() {
         <div>
           <h4 className="font-display text-lg uppercase tracking-widest text-accent">Kontak</h4>
           <p className="mt-2 text-sm text-primary-foreground/80">
-            Telepon / WA: <a className="hover:text-accent" href="tel:+6281143498910">0811-4349-891</a>
+            Telepon: <a className="hover:text-accent" href={`tel:${contactPhoneTel}`}>{contactPhoneDisplay}</a>
+          </p>
+          <p className="mt-2 text-sm text-primary-foreground/80">
+            WhatsApp:{" "}
+            <a className="hover:text-accent" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              Chat WhatsApp
+            </a>
           </p>
         </div>
       </div>
