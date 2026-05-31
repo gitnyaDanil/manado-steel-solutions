@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeaderLight } from "@/components/HeaderLight";
 import { Footer } from "@/components/Footer";
-import front from "@/assets/photos/workshop-front.jpg";
+import front from "@/assets/photos/tampak-depan.jpg";
 import { contactPhoneDisplay, contactPhoneTel, whatsappUrl } from "@/lib/contact";
 
 export const Route = createFileRoute("/contact")({
