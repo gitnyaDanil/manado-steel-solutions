@@ -1,0 +1,68 @@
+Future Improvements
+
+1. Make Contact Easier
+Your best business goal is getting people to contact the workshop.
+
+Add or improve:
+
+Floating WhatsApp button
+Click-to-call button
+“Kirim Pesan” form that opens WhatsApp with prefilled text
+Clear CTA on every page
+Right now the contact form should probably be changed so it actually sends users to WhatsApp instead of only showing a success toast.
+
+2. Add Google Analytics
+Search Console shows Google search traffic, but not all visitors. Add GA4 so you can see:
+
+how many people visit
+which pages they open
+mobile vs desktop
+where visitors come from
+how many click WhatsApp
+Then track WhatsApp clicks as an event.
+
+3. Improve Local SEO
+Add more search-friendly text for Manado services:
+
+Jasa bubut Manado
+Jasa las Manado
+Bengkel korter Manado
+Perbaikan crankshaft Manado
+Bengkel alat berat Manado
+Asphalt sprayer Sulawesi Utara
+Also create/claim a Google Business Profile. For a local workshop, this may matter more than normal Google ranking.
+
+4. Add Trust Content
+Customers need confidence before calling.
+
+Add:
+
+Before/after repair photos
+Short customer testimonials
+“Sejak 1970” story section
+Equipment/machine photos
+Quality testing explanation
+Common jobs handled
+5. Improve Performance
+The site uses many workshop photos. Compressing images can make mobile loading much faster.
+
+Target:
+
+WebP/AVIF images
+lazy loading gallery images
+smaller mobile image sizes
+6. Add a Sitemap
+Add:
+
+/sitemap.xml
+/robots.txt
+Then submit sitemap in Google Search Console. This helps Google discover /services, /gallery, and /contact.
+
+7. Polish Mobile Experience
+Most customers will probably visit from phones. Check:
+
+button sizes
+WhatsApp visibility
+text readability
+gallery loading speed
+contact info above the fold
