@@ -1,3 +1,4 @@
+import { trackPhoneClick, trackWhatsappClick } from "@/lib/analytics";
 import { contactPhoneDisplay, contactPhoneTel, whatsappUrl } from "@/lib/contact";
 
 export function Footer() {
@@ -20,11 +21,24 @@ export function Footer() {
         <div>
           <h4 className="font-display text-lg uppercase tracking-widest text-accent">Kontak</h4>
           <p className="mt-2 text-sm text-primary-foreground/80">
-            Telepon: <a className="hover:text-accent" href={`tel:${contactPhoneTel}`}>{contactPhoneDisplay}</a>
+            Telepon:{" "}
+            <a
+              className="hover:text-accent"
+              href={`tel:${contactPhoneTel}`}
+              onClick={() => trackPhoneClick("footer")}
+            >
+              {contactPhoneDisplay}
+            </a>
           </p>
           <p className="mt-2 text-sm text-primary-foreground/80">
             WhatsApp:{" "}
-            <a className="hover:text-accent" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              className="hover:text-accent"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsappClick("footer")}
+            >
               Chat WhatsApp
             </a>
           </p>

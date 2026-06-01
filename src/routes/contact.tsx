@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeaderLight } from "@/components/HeaderLight";
 import { Footer } from "@/components/Footer";
 import front from "@/assets/photos/tampak-depan.jpg";
+import { trackPhoneClick, trackWhatsappClick } from "@/lib/analytics";
 import { contactPhoneDisplay, contactPhoneTel, whatsappUrl } from "@/lib/contact";
 
 export const Route = createFileRoute("/contact")({
@@ -33,7 +34,11 @@ function ContactPage() {
             <h1 className="font-display text-6xl text-primary md:text-7xl">Hubungi Kami</h1>
             <p className="mx-auto mt-6 max-w-md text-muted-foreground">
               Untuk pertanyaan mengenai jasa perbaikan baja kami, hubungi kami di{" "}
-              <a href={`tel:${contactPhoneTel}`} className="font-medium text-accent hover:underline">
+              <a
+                href={`tel:${contactPhoneTel}`}
+                className="font-medium text-accent hover:underline"
+                onClick={() => trackPhoneClick("contact_intro")}
+              >
                 {contactPhoneDisplay}
               </a>{" "}
               atau kunjungi bengkel kami di Manado.
@@ -44,12 +49,14 @@ function ContactPage() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsappClick("contact_page_cta")}
                 className="rounded-full bg-[#25D366] px-6 py-3 font-display text-sm uppercase tracking-widest text-white transition-colors hover:bg-[#1ebe5d]"
               >
                 Chat WhatsApp
               </a>
               <a
                 href={`tel:${contactPhoneTel}`}
+                onClick={() => trackPhoneClick("contact_page_cta")}
                 className="rounded-full border border-input px-6 py-3 font-display text-sm uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
               >
                 Telepon
