@@ -16,9 +16,9 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Hubungi Bengkel Lengkoan" },
       { property: "og:description", content: "Telepon, alamat, dan lokasi di Google Maps." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://bengkellengkoan.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://bengkellengkoan.com/contact" }],
   }),
   component: ContactPage,
 });

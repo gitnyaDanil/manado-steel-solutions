@@ -39,9 +39,9 @@ export const Route = createFileRoute("/gallery")({
       },
       { property: "og:title", content: "Galeri Bengkel Lengkoan" },
       { property: "og:description", content: "Pengukuran presisi sesuai standar industri." },
-      { property: "og:url", content: "/gallery" },
+      { property: "og:url", content: "https://bengkellengkoan.com/gallery" },
     ],
-    links: [{ rel: "canonical", href: "/gallery" }],
+    links: [{ rel: "canonical", href: "https://bengkellengkoan.com/gallery" }],
   }),
   component: GalleryPage,
 });
@@ -65,13 +65,27 @@ const tests = [
 ];
 
 const allPhotos = [
-  bubut1, bubut2, bubut3, bubut4,
-  korter1, korter2,
-  crank1, crank2,
-  las1, las2,
-  sp1, sp2, sp3, sp4, sp5,
-  ex1, ex2, ex3, ex4,
-  front, micrometer2,
+  { src: bubut1, alt: "Proses bubut komponen mesin di Bengkel Lengkoan Manado" },
+  { src: bubut2, alt: "Mesin bubut Bengkel Lengkoan Manado" },
+  { src: bubut3, alt: "Hasil bubut poros dan roda gigi" },
+  { src: bubut4, alt: "Proses bubut baut dan komponen presisi" },
+  { src: korter1, alt: "Korter blok mesin diesel di Manado" },
+  { src: korter2, alt: "Boring silinder mesin kendaraan" },
+  { src: crank1, alt: "Perbaikan crankshaft mesin diesel" },
+  { src: crank2, alt: "Reparasi poros engkol di Bengkel Lengkoan" },
+  { src: las1, alt: "Pengelasan struktur baja berat" },
+  { src: las2, alt: "Las komponen mesin dan fabrikasi baja" },
+  { src: sp1, alt: "Unit asphalt sprayer Bengkel Lengkoan" },
+  { src: sp2, alt: "Asphalt sprayer untuk proyek jalan Sulawesi Utara" },
+  { src: sp3, alt: "Detail komponen asphalt sprayer" },
+  { src: sp4, alt: "Perawatan unit asphalt sprayer" },
+  { src: sp5, alt: "Penjualan asphalt sprayer Manado" },
+  { src: ex1, alt: "Perbaikan excavator hidrolik di Manado" },
+  { src: ex2, alt: "Silinder hidrolik alat berat" },
+  { src: ex3, alt: "Perbaikan boom dan arm excavator" },
+  { src: ex4, alt: "Komponen hidrolik excavator setelah perbaikan" },
+  { src: front, alt: "Tampak depan Bengkel Lengkoan Jl. Daan Mogot Manado" },
+  { src: micrometer2, alt: "Pengukuran micrometer presisi di bengkel" },
 ];
 
 function GalleryPage() {
@@ -103,11 +117,11 @@ function GalleryPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <h2 className="mb-10 text-center font-display text-4xl text-primary md:text-5xl">Galeri Pekerjaan</h2>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-            {allPhotos.map((src, i) => (
+            {allPhotos.map((photo, i) => (
               <img
                 key={i}
-                src={src}
-                alt={`Dokumentasi pekerjaan ${i + 1}`}
+                src={photo.src}
+                alt={photo.alt}
                 className="aspect-square w-full rounded-xl object-cover ring-1 ring-border transition-transform duration-300 hover:scale-[1.02]"
                 loading="lazy"
               />

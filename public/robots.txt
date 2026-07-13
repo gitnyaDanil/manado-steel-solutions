@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bengkellengkoan.com/sitemap.xml

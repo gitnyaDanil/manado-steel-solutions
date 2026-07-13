@@ -20,9 +20,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Bengkel Lengkoan — Sejak 1970" },
       { property: "og:description", content: "Jasa bubut, las, korter, dan bor terpercaya di Manado." },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://bengkellengkoan.com/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://bengkellengkoan.com/" }],
   }),
   component: HomePage,
 });
@@ -115,6 +115,20 @@ function HomePage() {
       </section>
 
       <Footer />
+
+      {/* Local SEO — keyword-rich area for Google */}
+      <section className="border-t border-border bg-muted/20 py-12">
+        <div className="mx-auto max-w-4xl px-6 md:px-10">
+          <h2 className="font-display text-3xl text-primary md:text-4xl">Bengkel Las & Bubut Terpercaya di Manado</h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Bengkel Lengkoan adalah bengkel bubut Manado yang telah melayani kebutuhan industri dan perorangan sejak 1970.
+            Kami menyediakan <strong>jasa bubut Manado</strong>, <strong>jasa las Manado</strong>,
+            <strong> bengkel korter Manado</strong>, perbaikan crankshaft, serta layanan alat berat seperti
+            <strong> perbaikan excavator hidrolik</strong> dan penjualan unit asphalt sprayer di Sulawesi Utara.
+            Berlokasi di Jl. Daan Mogot No.47, Tikala Baru, Manado — mudah dijangkau dari seluruh wilayah Sulut.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

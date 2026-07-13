@@ -24,9 +24,9 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:title", content: "Layanan Bengkel Lengkoan" },
       { property: "og:description", content: "Tersedia jasa ahli untuk berbagai perbaikan kerusakan besi." },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://bengkellengkoan.com/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://bengkellengkoan.com/services" }],
   }),
   component: ServicesPage,
 });
@@ -35,32 +35,32 @@ const services = [
   {
     title: "Bubut",
     images: [bubut, bubut2],
-    desc: "Pengerjaan presisi pada poros, roda gigi, baut, dan komponen mesin lainnya menggunakan mesin bubut berdaya tinggi.",
+    desc: "Pengerjaan presisi pada poros, roda gigi, baut, dan komponen mesin lainnya menggunakan mesin bubut berdaya tinggi di Manado.",
   },
   {
     title: "Korter",
     images: [korter, korter2],
-    desc: "Korter blok mesin dan boring silinder untuk mengembalikan ukuran standar dan kerataan permukaan.",
+    desc: "Korter blok mesin dan boring silinder di Manado untuk mengembalikan ukuran standar dan kerataan permukaan.",
   },
   {
     title: "Crankshaft",
     images: [crankshaft, crankshaft2],
-    desc: "Perbaikan, pengukuran, dan reparasi poros engkol (crankshaft) mesin diesel maupun bensin.",
+    desc: "Perbaikan, pengukuran, dan reparasi poros engkol (crankshaft) mesin diesel maupun bensin di Manado, Sulawesi Utara.",
   },
   {
     title: "Las / Pengelasan",
     images: [las, las2],
-    desc: "Pengelasan struktur baja, perbaikan komponen berat, dan fabrikasi sesuai kebutuhan.",
+    desc: "Pengelasan struktur baja, perbaikan komponen berat, dan fabrikasi sesuai kebutuhan di Manado.",
   },
   {
     title: "Asphalt Sprayer",
     images: [sprayer, sprayer2],
-    desc: "Penjualan unit asphalt sprayer serta perawatan dan perbaikan komponennya.",
+    desc: "Penjualan unit asphalt sprayer serta perawatan dan perbaikan komponennya untuk proyek jalan di Sulawesi Utara.",
   },
   {
     title: "Excavator Hidrolik",
     images: [excavator, excavator2],
-    desc: "Perbaikan komponen hidrolik alat berat seperti silinder, boom, dan arm excavator.",
+    desc: "Perbaikan komponen hidrolik alat berat seperti silinder, boom, dan arm excavator di Manado dan sekitarnya.",
   },
 ];
 
