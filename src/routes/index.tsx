@@ -12,14 +12,14 @@ import excavatorImg from "@/assets/photos/excavator-1.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
+      { title: "Bengkel Lengkoan — Bubut, Las, Korter, Crankshaft & Excavator Hidrolik di Manado" },
       {
         name: "description",
         content:
-          "Bengkel terpercaya untuk jasa bubut, las, korter, dan bor di Manado, Sulawesi Utara. Sejak 1970.",
+          "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970. Jl. Daan Mogot No.47, Tikala.",
       },
       { property: "og:title", content: "Bengkel Lengkoan — Sejak 1970" },
-      { property: "og:description", content: "Jasa bubut, las, korter, dan bor terpercaya di Manado." },
+      { property: "og:description", content: "Bengkel bubut, las, korter, crankshaft & excavator hidrolik terpercaya di Manado." },
       { property: "og:url", content: "https://bengkellengkoan.com/" },
     ],
     links: [{ rel: "canonical", href: "https://bengkellengkoan.com/" }],

@@ -80,26 +80,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
+      { title: "Bengkel Lengkoan — Bubut, Las, Korter, Crankshaft & Excavator Hidrolik di Manado" },
       {
         name: "description",
         content:
-          "Bengkel terpercaya untuk jasa bubut, las, korter, dan bor di Manado, Sulawesi Utara. Sejak 1970.",
+          "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970. Jl. Daan Mogot No.47, Tikala.",
       },
       { name: "author", content: "Bengkel Lengkoan" },
       { property: "og:site_name", content: "Bengkel Lengkoan" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bengkellengkoan.com/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
-      { name: "twitter:title", content: "Bengkel Lengkoan — Bubut, Las, Korter & Bor di Manado" },
+      { property: "og:title", content: "Bengkel Lengkoan — Bubut, Las, Korter, Crankshaft & Excavator Hidrolik di Manado" },
+      { name: "twitter:title", content: "Bengkel Lengkoan — Bubut, Las, Korter, Crankshaft & Excavator Hidrolik di Manado" },
       {
         property: "og:description",
-        content: "Bengkel terpercaya untuk jasa bubut, las, korter, dan bor di Manado, Sulawesi Utara. Sejak 1970.",
+        content: "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970. Jl. Daan Mogot No.47, Tikala.",
       },
       {
         name: "twitter:description",
-        content: "Bengkel terpercaya untuk jasa bubut, las, korter, dan bor di Manado, Sulawesi Utara. Sejak 1970.",
+        content: "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970. Jl. Daan Mogot No.47, Tikala.",
       },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7eb1a020-79a3-4637-bdf2-683624f1ef95/id-preview-308e1008--dbaa775f-7542-44ed-a635-381344df328d.lovable.app-1780165623520.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7eb1a020-79a3-4637-bdf2-683624f1ef95/id-preview-308e1008--dbaa775f-7542-44ed-a635-381344df328d.lovable.app-1780165623520.png" },
@@ -134,7 +134,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "LocalBusiness",
           name: "Bengkel Lengkoan",
           description:
-            "Bengkel bubut, las, korter, dan bor di Manado. Melayani perbaikan baja dan komponen mesin sejak 1970.",
+            "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer di Manado. Melayani perbaikan baja dan komponen mesin sejak 1970.",
           url: "https://bengkellengkoan.com",
           telephone: "+62-811-4349-891",
           image: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7eb1a020-79a3-4637-bdf2-683624f1ef95/id-preview-308e1008--dbaa775f-7542-44ed-a635-381344df328d.lovable.app-1780165623520.png",
@@ -157,6 +157,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           sameAs: [
             "https://maps.google.com/?q=Bengkel+Lengkoan+Manado",
           ],
+        }),
+      },
+      {
+        // Organization schema — helps Google show logo in Search & Knowledge Panel
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Bengkel Lengkoan",
+          url: "https://bengkellengkoan.com",
+          logo: "https://bengkellengkoan.com/assets/logo.jpg",
+          image: "https://bengkellengkoan.com/assets/logo.jpg",
+          telephone: "+628114349891",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Jl. Daan Mogot No.47, Tikala Baru",
+            addressLocality: "Manado",
+            addressRegion: "Sulawesi Utara",
+            postalCode: "95126",
+            addressCountry: "ID",
+          },
         }),
       },
     ],

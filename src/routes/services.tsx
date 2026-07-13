@@ -17,50 +17,107 @@ import excavator2 from "@/assets/photos/excavator-3.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Layanan — Bengkel Lengkoan" },
+      { title: "Layanan — Bengkel Lengkoan | Bubut, Las, Korter, Crankshaft, Excavator, Asphalt Sprayer Manado" },
       {
         name: "description",
-        content: "Jasa bubut, las, korter, crankshaft, asphalt sprayer, dan perbaikan excavator hidrolik di Manado.",
+        content:
+          "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970. Jl. Daan Mogot No.47, Tikala.",
       },
-      { property: "og:title", content: "Layanan Bengkel Lengkoan" },
-      { property: "og:description", content: "Tersedia jasa ahli untuk berbagai perbaikan kerusakan besi." },
+      { property: "og:title", content: "Layanan Bengkel Lengkoan — Bubut, Las, Korter & Lebih" },
+      {
+        property: "og:description",
+        content:
+          "Bengkel bubut, las, korter, crankshaft, excavator hidrolik & asphalt sprayer terpercaya di Manado sejak 1970.",
+      },
       { property: "og:url", content: "https://bengkellengkoan.com/services" },
     ],
-    links: [{ rel: "canonical", href: "https://bengkellengkoan.com/services" }],
+    links: [
+      { rel: "canonical", href: "https://bengkellengkoan.com/services" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AutoRepair",
+          name: "Bengkel Lengkoan",
+          areaServed: "Manado",
+          address: "Jl. Daan Mogot No.47, Tikala Baru, Kota Manado, Sulawesi Utara",
+          makesOffer: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bubut" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Las / Pengelasan" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Korter Mesin" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perbaikan Crankshaft" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perbaikan Excavator Hidrolik" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Asphalt Sprayer" } },
+          ],
+        }),
+      },
+    ],
   }),
   component: ServicesPage,
 });
 
-const services = [
+const services: { title: string; id: string; images: string[]; desc: string; detail: string }[] = [
   {
     title: "Bubut",
+    id: "bubut",
     images: [bubut, bubut2],
     desc: "Pengerjaan presisi pada poros, roda gigi, baut, dan komponen mesin lainnya menggunakan mesin bubut berdaya tinggi di Manado.",
+    detail:
+      "Layanan ini umum dibutuhkan untuk perbaikan mesin kendaraan, alat berat, dan mesin industri yang ausnya komponen berputar. " +
+      "Kami mengerjakan bubut silinder, bubut dalam, dan pembubutan ulir sesuai spesifikasi. " +
+      "Cocok untuk bengkel, kontraktor, dan industri di Manado dan sekitar Sulawesi Utara.",
   },
   {
-    title: "Korter",
+    title: "Korter Mesin",
+    id: "korter",
     images: [korter, korter2],
     desc: "Korter blok mesin dan boring silinder di Manado untuk mengembalikan ukuran standar dan kerataan permukaan.",
+    detail:
+      "Silinder yang sudah aus atau baret menyebabkan kompresi bocor dan mesin boros oli — korter adalah solusinya. " +
+      "Proses ini menghaluskan dinding silinder kembali ke toleransi pabrik menggunakan mesin boring presisi. " +
+      "Kami menangani mesin diesel dan bensin untuk kendaraan ringan maupun alat berat di Manado.",
   },
   {
     title: "Crankshaft",
+    id: "crankshaft",
     images: [crankshaft, crankshaft2],
     desc: "Perbaikan, pengukuran, dan reparasi poros engkol (crankshaft) mesin diesel maupun bensin di Manado, Sulawesi Utara.",
+    detail:
+      "Crankshaft yang bengkok atau aus pada journal-nya menyebabkan getaran berlebih dan kerusakan bantalan. " +
+      "Kami melakukan pengukuran presisi dengan micrometer, pelurusan, dan penggerindaan journal sesuai standar undersize. " +
+      "Layanan ini tersedia untuk mesin truk, bus, alat berat, dan kendaraan pribadi di Manado.",
   },
   {
     title: "Las / Pengelasan",
+    id: "las",
     images: [las, las2],
     desc: "Pengelasan struktur baja, perbaikan komponen berat, dan fabrikasi sesuai kebutuhan di Manado.",
+    detail:
+      "Kami mengerjakan las MIG, las listrik, dan las argon untuk berbagai kebutuhan industri dan konstruksi. " +
+      "Termasuk pengelasan rangka alat berat, perbaikan chassis, fabrikasi bracket, dan sambungan pipa baja. " +
+      "Hasil las diperiksa kekuatan sambungannya sebelum diserahkan ke pelanggan.",
   },
   {
     title: "Asphalt Sprayer",
+    id: "asphalt-sprayer",
     images: [sprayer, sprayer2],
     desc: "Penjualan unit asphalt sprayer serta perawatan dan perbaikan komponennya untuk proyek jalan di Sulawesi Utara.",
+    detail:
+      "Unit asphalt sprayer kami digunakan untuk proyek pengerasan jalan, patching, dan pemeliharaan jalan di Sulawesi Utara. " +
+      "Kami juga melayani servis rutin, penggantian pompa, selang, dan nozzle sprayer. " +
+      "Tersedia unit siap pakai untuk kontraktor dan pemerintah daerah di wilayah Manado dan sekitarnya.",
   },
   {
     title: "Excavator Hidrolik",
+    id: "excavator-hidrolik",
     images: [excavator, excavator2],
     desc: "Perbaikan komponen hidrolik alat berat seperti silinder, boom, dan arm excavator di Manado dan sekitarnya.",
+    detail:
+      "Kebocoran hidrolik pada excavator, bulldozer, atau loader menyebabkan downtime yang mahal di lapangan. " +
+      "Kami memperbaiki silinder hidrolik, mengganti seal kit, dan memperbaiki kerusakan pada boom, arm, dan bucket cylinder. " +
+      "Layanan tersedia untuk semua merek alat berat umum yang beroperasi di Sulawesi Utara.",
   },
 ];
 
@@ -91,8 +148,9 @@ function ServicesPage() {
                 ))}
               </div>
               <div>
-                <h2 className="font-display text-4xl tracking-wide text-primary md:text-5xl">{s.title}</h2>
+                <h2 id={s.id} className="font-display text-4xl tracking-wide text-primary md:text-5xl">{s.title}</h2>
                 <p className="mt-4 max-w-prose text-base text-muted-foreground md:text-lg">{s.desc}</p>
+                <p className="mt-3 max-w-prose text-sm text-muted-foreground">{s.detail}</p>
               </div>
             </article>
           ))}
